@@ -14,6 +14,12 @@ Sebuah simulasi interaktif karakter **Iron Man** yang dibuat menggunakan **C# Wi
 
 ## 📸 Fitur Utama
 
+### 🎨 Procedural Character Rendering (Penggambaran Karakter Murni dengan Kode)
+Saya menggambar karakter Iron Man dalam simulasi ini **tidak menggunakan aset gambar (.png/.jpg) sama sekali**. Seluruh bagian tubuh karakter dirender murni dari nol secara prosedural menggunakan kombinasi bidang gambar (primitif grafis) melalui GDI+:
+- **Kepala & Masker:** Kombinasi `FillRectangle` dan `FillPolygon` dengan perhitungan koordinat sudut yang presisi untuk membentuk helm khas Iron Man.
+- **Arc Reactor:** Menggunakan `FillEllipse` dengan efek warna *Cyan* di bagian dada.
+- **Proporsi Tubuh:** Menggabungkan berbagai bentuk dasar untuk badan, tangan, dan kaki, yang kemudian digabungkan ke dalam satu sistem transformasi terpusat agar bisa berotasi dan bergerak secara kesatuan.
+
 ### 🎮 Kontrol Interaktif
 - **W / A / S / D** — Menggerakkan karakter Iron Man ke atas, kiri, bawah, dan kanan
 - **Mouse** — Mengarahkan tangan kanan Iron Man (mode Aim & Fire)
